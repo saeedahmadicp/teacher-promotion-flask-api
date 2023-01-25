@@ -8,7 +8,7 @@ Flask API for teacher promotion. Due to confidentiality agreements, I am unable 
 
 ## Setup
 - open the terminal
-- change the working directory to the current working directory
+- change the directory to the current working directory
 - execute the below commands
 	- `pip3 install pipenv`
 	- `pipenv install`
