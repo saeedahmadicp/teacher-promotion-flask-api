@@ -27,7 +27,6 @@ def result():
         data = [age, experience, grade, lastPromotion, label_encoder(promo1), label_encoder(promo2), label_encoder(promo3)]
         prediction = process_and_predict(data)
        
-        #result = percentageOfKeywordsUsed(input_text)
         #redirecting the user to the  page    
         return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction)
     else:
