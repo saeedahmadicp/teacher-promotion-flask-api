@@ -8,17 +8,40 @@ Flask API for teacher promotion. Due to confidentiality agreements, I am unable 
 
 ## Setup
 - open the terminal
-- change the directory to the current working directory
+- clone the repository
+	```bash
+	git clone https://github.com/saeedahmadicp/teacher-promotion-flask-api.git
+	```
+- change the directory
+
+	```bash
+	cd teacher-promotion-flask-api
+	```
 - execute the below commands
-	- `pip3 install pipenv`
-	- `pipenv install`
-	- `pipenv shell`
- 
-- install the following packages 
-	- `pip install -r requirements.txt`
+ 	```bash
+	pip3 install pipenv
+	```
+	```bash
+	pipenv install
+	```
+	```bash
+	pipenv shell
+	```
+	
+- install the requirements 
+	```bash
+	pip install -r requirements.txt
+	```
 
 - execute the following commands
-	- `set FLASK_APP=main.py`
- 	- `set FLASK_ENV=development`
- 	- `flask run`
+	```bash
+	set FLASK_APP=main.py
+	```
+	```bash
+ 	set FLASK_ENV=development
+	```
+	```bash
+ 	flask run
+	```
+	
 - **If you are using Linux or Mac, use `export` instead of `set` in the above commands**
