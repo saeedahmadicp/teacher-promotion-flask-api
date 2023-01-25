@@ -21,3 +21,4 @@ Flask API for teacher promotion system. Due to confidentiality agreements, I am 
 	- `set FLASK_APP=main.py`
  	- `set FLASK_ENV=development`
  	- `flask run`
+- **If you are using Linux or Mac, use `export` instead of `set` in the above commands**
