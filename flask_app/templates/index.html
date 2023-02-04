@@ -32,18 +32,25 @@
             <h1 style="color: rgb(255, 153, 0);">Promotion Prediction System</h1>
             <h6 class="mb-4">Kindly enter the mentioned details to find the eligibility for Promotion</h6>
           </div>
-            <form action="result" method="post">
+            <form action="" method="post">
+              {{form.hidden_tag()}}
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="fname">First Name</label>
-                    <input type="text" class="form-control" placeholder="First Name" name="fname" id="fname" required="required">
+                    {{ form.firstName.label }}<br>
+                    {{ form.firstName(size=32, class="form-control", placeholder="First Name") }}<br>
+                    {% for error in form.firstName.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="lname">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Last Name" name="lname" id="lname" required="required">
+                    {{ form.lastName.label }}<br>
+                    {{ form.lastName(size=32, class="form-control", placeholder="Last Name") }}<br>
+                    {% for error in form.lastName.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
               </div>
@@ -51,14 +58,20 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="age">Age</label>
-                    <input type="number" class="form-control" placeholder="Age" name="age" id="age" required="required">
+                    {{ form.age.label }}<br>
+                    {{ form.age(size=32, class="form-control", placeholder="Age") }}<br>
+                    {% for error in form.age.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="experience">Experience</label>
-                    <input type="number" class="form-control" placeholder="Experience" name="experience" id="experience" required="required">
+                    {{ form.experience.label }}<br>
+                    {{ form.experience(size=32, class="form-control", placeholder="Experience") }}<br>
+                    {% for error in form.experience.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
               </div>
@@ -66,117 +79,59 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="grade">Grade</label>
-                    <input type="number" class="form-control" placeholder="Grade" name="grade" id="grade" required="required">
+                    {{ form.grade.label }}<br>
+                    {{ form.grade(size=32, class="form-control", placeholder="Grade") }}<br>
+                    {% for error in form.grade.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
                 <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="lpromotion">Last Promotion</label>
-                    <input type="number" class="form-control" placeholder="Last Promotion" name="lpromotion" id="lpromotion" required="required">
+                    {{ form.last_promotion.label }}<br>
+                    {{ form.last_promotion(size=32, class="form-control", placeholder="Last Promotion") }}<br>
+                    {% for error in form.last_promotion.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                   </div>    
                 </div>
               </div>
 
 
               <div class="row">
-                &nbsp; &nbsp; &nbsp; <label >Promotion 1</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <div class="col-sm-2">
-                  
-                  <div class="form-group first">
-                   
-                    <input type="radio"  name="promo1" id="promo1M" value="M" checked> &nbsp;
-                   <label for="M">M</label>
-                    
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo1" id="promo1E" value="E"> &nbsp;
-                    <label for="E">E</label> 
-                  </div>    
-                </div>
-
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio"  name="promo1" id="promo1E+" value="E+"> &nbsp;
-                    <label for="E+">E+</label>
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo1" id="promo1S" value="S"> &nbsp;
-                    <label for="S">S</label>
-                  </div>    
-                </div>
+                {{form.promo1.label(class="ml-1 mr-5")}}
+                {% for subfield in form.promo1 %}
+                  <div class="col-sm-2">
+                    <div class="form-group first">
+                      {{subfield}}
+                      {{subfield.label}}
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
 
               <div class="row">
-                &nbsp; &nbsp; &nbsp; <label >Promotion 2</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <div class="col-sm-2">
-                  
-                  <div class="form-group first">
-                   
-                    <input type="radio"  name="promo2" id="promo2M" value="M" checked> &nbsp;
-                   <label for="M">M</label>
-                    
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo2" id="promo2E" value="E"> &nbsp;
-                    <label for="E">E</label> 
-                  </div>    
-                </div>
-
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio"  name="promo2" id="promo2E+" value="E+"> &nbsp;
-                    <label for="E+">E+</label>
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo2" id="promo2S" value="S"> &nbsp;
-                    <label for="S">S</label>
-                  </div>    
-                </div>
+                {{form.promo2.label(class="ml-1 mr-5")}}
+                {% for subfield in form.promo2 %}
+                  <div class="col-sm-2">
+                    <div class="form-group first">
+                      {{subfield}}
+                      {{subfield.label}}
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
 
-
               <div class="row">
-                &nbsp; &nbsp; &nbsp; <label >Promotion 3</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <div class="col-sm-2">
-                  
-                  <div class="form-group first">
-                   
-                    <input type="radio"  name="promo3" id="promo3M" value="M" checked> &nbsp;
-                   <label for="M">M</label>
-                    
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo3" id="promo3E" value="E"> &nbsp;
-                    <label for="E">E</label> 
-                  </div>    
-                </div>
-
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio"  name="promo3" id="promo3E+" value="E+"> &nbsp;
-                    <label for="E+">E+</label>
-                  </div>    
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group first">
-                    <input type="radio" name="promo3" id="promo3S" value="S"> &nbsp;
-                    <label for="S">S</label>
-                  </div>    
-                </div>
+                {{form.promo3.label(class="ml-1 mr-5")}}
+                {% for subfield in form.promo3 %}
+                  <div class="col-sm-2">
+                    <div class="form-group first">
+                      {{subfield}}
+                      {{subfield.label}}
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
               <br> 
              <div class="text-center">

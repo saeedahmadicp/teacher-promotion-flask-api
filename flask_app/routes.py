@@ -13,40 +13,24 @@ def home():
             firstName = form.firstName.data
             lastName = form.lastName.data
             age = form.age.data
-            experience = request.form['experience']
-            grade = request.form['grade']
-            lastPromotion = request.form['lpromotion']
-            promo1 = request.form['promo1']
-            promo2 = request.form['promo2']
-            promo3 = request.form['promo3']
+            experience = form.experience.data
+            grade = form.grade.data
+            lastPromotion = form.last_promotion.data
+            promo1 = form.promo1.data
+            promo2 = form.promo2.data
+            promo3 = form.promo3.data
             data = [age, experience, grade, lastPromotion, label_encoder(promo1), label_encoder(promo2), label_encoder(promo3)]
             prediction = process_and_predict(data)
-            print("Prediction", prediction)
-            print("Prediction", data)
             #redirecting the user to the  page    
-            return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction)
-         else:
-            print('Hallejulah')     
+            return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction)  
     else:
-        return render_template('index1.html', form=form)
+        return render_template('index.html', form=form)
 
 #defing the result route
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     if request.method == 'POST':               #use args if using get method
-        firstName = request.form['fname']
-        lastName = request.form['lname']
-        age = request.form['age']
-        experience = request.form['experience']
-        grade = request.form['grade']
-        lastPromotion = request.form['lpromotion']
-        promo1 = request.form['promo1']
-        promo2 = request.form['promo2']
-        promo3 = request.form['promo3']
-        data = [age, experience, grade, lastPromotion, label_encoder(promo1), label_encoder(promo2), label_encoder(promo3)]
-        prediction = process_and_predict(data)
-       
-        #redirecting the user to the  page    
-        return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction)
+        pass
+
     else:
         return redirect('/')
