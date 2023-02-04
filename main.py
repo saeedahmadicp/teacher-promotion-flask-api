@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from load_process_prediction import label_encoder, process_and_predict
-from forms import InputForm
+from flask_app.forms import InputForm
 
 #Declaring the flask object
 app = Flask(__name__)
