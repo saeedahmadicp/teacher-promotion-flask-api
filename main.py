@@ -1,14 +1,21 @@
 from flask import Flask, render_template, request, redirect
 from load_process_prediction import label_encoder, process_and_predict
+from forms import InputForm
 
 #Declaring the flask object
 app = Flask(__name__)
 
+app.config.update(dict(
+    SECRET_KEY="powerful secretkey",
+    WTF_CSRF_SECRET_KEY="a csrf secret key"
+))
 
 #defining the home route
 @app.route('/')
+@app.route('/index')
 def home():
-    return render_template('index.html')
+    form = InputForm()
+    return render_template('index1.html', form=form)
 
 
 #defing the result route
