@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 - execute the following commands
 	```bash
-	set FLASK_APP=main.py
+	set FLASK_APP=main_app.py
 	```
 	```bash
  	set FLASK_ENV=development
