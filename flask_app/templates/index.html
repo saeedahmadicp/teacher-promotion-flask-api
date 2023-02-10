@@ -97,7 +97,7 @@
                 </div>
               </div>
 
-
+              <div class="container-fluid">
               <div class="row">
                 {{form.promo1.label(class="ml-1 mr-5")}}
                 {% for subfield in form.promo1 %}
@@ -109,8 +109,11 @@
                   </div>
                 {% endfor %}
               </div>
+              </div>
 
+              <div class="container-fluid">
               <div class="row">
+                <!-- {{form.promo2.label(class="ml-1 mr-5")}} -->
                 {{form.promo2.label(class="ml-1 mr-5")}}
                 {% for subfield in form.promo2 %}
                   <div class="col-sm-2">
@@ -121,7 +124,9 @@
                   </div>
                 {% endfor %}
               </div>
+              </div>
 
+              <div class="container-fluid">
               <div class="row">
                 {{form.promo3.label(class="ml-1 mr-5")}}
                 {% for subfield in form.promo3 %}
@@ -133,6 +138,8 @@
                   </div>
                 {% endfor %}
               </div>
+            </div>
+            
               <br> 
              <div class="text-center">
               <input type="submit" value="Predict Promotion" class="btn px-5 btn-primary">
