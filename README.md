@@ -47,3 +47,24 @@ pip install -r requirements.txt
 	```
 	
 - **If you are using Linux or Mac, use `export` instead of `set` in the above commands**
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/saeedahmadicp"><img src="https://avatars.githubusercontent.com/saeedahmadicp?v=4?s=100" width="100px;" alt="Saeed Ahmad"/><br /><sub><b>Saeed Ahmad</b></sub></a><br /><a href="https://github.com/saeedahmadicp/teacher-promotion-flask-api/commits?author=saeedahmadicp" title="Code">💻</a> <a href="https://github.com/saeedahmadicp/teacher-promotion-flask-api/commits?author=saeedahmadicp" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Laughing-Kid"><img src="https://avatars3.githubusercontent.com/Laughing-Kid?v=4?s=100" width="100px;" alt="Shaharyar Sajid"/><br /><sub><b>Shaharyar Sajid</b></sub></a><br /><a href="https://github.com/saeedahmadicp/teacher-promotion-flask-api/commits?author=Laughing-Kid" title="Code">💻</a></td>
+ </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
