@@ -9,7 +9,7 @@ from load_process_prediction import label_encoder, process_and_predict
 def home():
     form = InputForm()
     if request.method == 'POST':
-         if form.validate_on_submit():
+        if form.validate_on_submit():
             firstName = form.firstName.data
             lastName = form.lastName.data
             age = form.age.data
@@ -22,7 +22,7 @@ def home():
             data = [age, experience, grade, lastPromotion, label_encoder(promo1), label_encoder(promo2), label_encoder(promo3)]
             prediction = process_and_predict(data)
             #redirecting the user to the  page    
-            return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction)  
+            return render_template('result.html', firstName=firstName, lastName=lastName, prediction=prediction) 
     else:
         return render_template('index.html', form=form)
 
