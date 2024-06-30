@@ -1,0 +1,12 @@
+version: '0.1'
+
+services:
+  teacher-promotion-flask-api:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: teacher-promotion-flask-api
+    ports:
+      - 5000:5000
+    # bridge - connect to docker container from localhost
+    network_mode: bridge
